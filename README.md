@@ -1,206 +1,87 @@
+﻿<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Text%20to%20SQL%20Assistent&fontSize=32&fontColor=ffffff&animation=twinkling&fontAlignY=35"/>
+</div>
 
-# 🤖 AI-Powered Text-to-SQL Assistant
+# Text-to-SQL-Assistent
 
-An **AI-driven Streamlit application** that allows users to query a **SQLite database** in **natural language**.  
-The app uses **Google Gemini (Generative AI)** to convert English questions into **valid SQL queries**, execute them, and present results with interactive charts and dashboards.
-
----
-
-## ✨ Features
-
-- 🔍 **Natural Language Query Assistant**
-  - Ask questions in plain English
-  - AI converts queries into **SQL**
-  - View results in tables with CSV download option
-
-- 🗄️ **Database Explorer**
-  - Explore table schemas
-  - Browse up to 100 rows of data
-  - Quick stats on student, course, and enrollment data
-
-- 📈 **Analytics Dashboard**
-  - Interactive **Plotly charts**
-  - KPIs like total students, average marks, top performer, etc.
-  - Visuals for marks distribution, gender ratio, city-wise counts, age distribution
-
-- 📜 **Query History**
-  - Save executed queries with timestamps
-  - Re-run queries directly from history
-  - Clear history option
-
-- ❓ **Help & Examples**
-  - Guidance on query writing
-  - Example queries
-  - Tips for better results
+AI-powered text-to-SQL assistant that converts natural language queries to SQL statements using large language models.
 
 ---
 
-## 🛠️ Tech Stack
+## Project Status: âœ… COMPLETE & READY FOR DEPLOYMENT
 
-- **Frontend/UI:** [Streamlit](https://streamlit.io/)  
-- **Database:** SQLite (local file: `enhanced_student.db`)  
-- **AI Model:** Google Gemini (via `google-generativeai`)  
-- **Data Visualization:** Plotly (Express & Graph Objects)  
-- **Language:** Python  
+![GitHub stars](https://img.shields.io/github/stars/Abdul-Insighht/=social)
+![GitHub forks](https://img.shields.io/github/forks/Abdul-Insighht/=social)
 
 ---
 
-## 📂 Project Structure
+## ðŸ› ï¸ Tech Stack
 
 ```
-
-.
-├── enhanced_student.db      # SQLite database (auto-created with sample data)
-├── app.py                   # Main Streamlit app file
-├── .env                     # Environment variables (API keys)
-├── requirements.txt         # Python dependencies
-└── README.md                # Project documentation
-
-````
+Python, LangChain, LLM, Streamlit, SQL
+```
 
 ---
 
-## ⚙️ Setup & Installation
+## ðŸš€ Getting Started
 
 1. **Clone the repository**
-
 ```bash
-git clone https://github.com/yourusername/text-to-sql-assistant.git
-cd text-to-sql-assistant
-````
-
-2. **Create virtual environment (recommended)**
-
-```bash
-python -m venv venv
-source venv/bin/activate   # On macOS/Linux
-venv\Scripts\activate      # On Windows
+git clone https://github.com/Abdul-Insighht/Text-to-SQL-Assistent.git
+cd Text-to-SQL-Assistent
 ```
 
-3. **Install dependencies**
-
+2. **Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Add API Key**
-
-Create a `.env` file in the project root:
-
-```env
-GOOGLE_API_KEY=your_api_key_here
-```
-
----
-
-## ▶️ Running the App
-
+3. **Run the project**
 ```bash
-streamlit run app.py
+python main.py
 ```
 
-The app will launch at **[http://localhost:8501](http://localhost:8501)**
+---
+
+## â­ Quick Links
+
+â­ [Star this repo](https://github.com/Abdul-Insighht/Text-to-SQL-Assistent) â€¢ ðŸ› [Report Bug](https://github.com/Abdul-Insighht/Text-to-SQL-Assistent/issues) â€¢ ðŸ’¡ [Request Feature](https://github.com/Abdul-Insighht/Text-to-SQL-Assistent/issues)
 
 ---
 
-## 📊 Sample Database Schema
-
-### STUDENT
-
-| Column          | Type    | Description        |
-| --------------- | ------- | ------------------ |
-| ID              | INTEGER | Primary Key        |
-| NAME            | VARCHAR | Student name       |
-| CLASS           | VARCHAR | Program/Class      |
-| SECTION         | VARCHAR | Section identifier |
-| MARKS           | INTEGER | Marks obtained     |
-| AGE             | INTEGER | Student age        |
-| GENDER          | VARCHAR | Gender             |
-| CITY            | VARCHAR | City               |
-| ENROLLMENT_DATE | DATE    | Enrollment date    |
-
-### COURSES
-
-| Column      | Type    | Description       |
-| ----------- | ------- | ----------------- |
-| COURSE_ID   | INTEGER | Primary Key       |
-| COURSE_NAME | VARCHAR | Course title      |
-| INSTRUCTOR  | VARCHAR | Course instructor |
-| CREDITS     | INTEGER | Credit hours      |
-| DEPARTMENT  | VARCHAR | Department name   |
-
-### ENROLLMENTS
-
-| Column        | Type    | Description                      |
-| ------------- | ------- | -------------------------------- |
-| ENROLLMENT_ID | INTEGER | Primary Key                      |
-| STUDENT_ID    | INTEGER | Foreign Key → STUDENT(ID)        |
-| COURSE_ID     | INTEGER | Foreign Key → COURSES(COURSE_ID) |
-| GRADE         | VARCHAR | Grade obtained                   |
-| SEMESTER      | VARCHAR | Semester name                    |
+Made with â¤ï¸ using Python & AI Technologies â€” Demonstration by **Abdul-Insighht** - Data Science Specialist | AI Agent & Agentic AI Developer
 
 ---
 
-## 🧑‍💻 Example Queries
+## ðŸ‘¤ Author
 
-* "Show all students"
-* "How many students are in each class?"
-* "Students with marks above 90"
-* "Average marks by class"
-* "Top 5 students by marks"
-* "Count of students by city"
+<table>
+<tr>
+<td>
+
+**Hafiz Abdul Rehman**  
+[Abdul-Insighht](https://github.com/Abdul-Insighht) Â· he/him  
+**Data Science Specialist | AI Agent & Agentic AI Developer**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Abdul--Insighht-181717?style=flat-square&logo=github)](https://github.com/Abdul-Insighht)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/hafiz-abdul-rehman-9990ab329/)
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 📌 Future Improvements
-
-* Support for **multiple databases**
-* User authentication system
-* Export results to **Excel / PDF**
-* Deploy on **Streamlit Cloud / Hugging Face Spaces**
-
----
-
-## 📜 License
+## ðŸ“„ License
 
 This project is licensed under the **MIT License**.
 
 ---
 
-## 🙌 Acknowledgements
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
+</div>
 
-* [Streamlit](https://streamlit.io/) for the web framework
-* [Plotly](https://plotly.com/python/) for interactive charts
-* [Google Gemini](https://ai.google.dev/) for natural language to SQL conversion
-
----
-
-```
-
----
-
-
----
-
-## 📬 Contact
-
-**Hafiz Abdul Rehman**
-
-- 📧 Email: hafizrehman3321@gmail.com
-- 💼 LinkedIn: [Hafiz Abdul Rehman](https://linkedin.com/in/hafiz-abdul-rehman-9990ab329)
-- 🐙 GitHub: [Abdul-Insighht](https://github.com/Abdul-Insighht)
-
----
-
-## 🌟 Show Your Support
-
-If you find this project helpful, please consider:
-
-- ⭐ **Starring** this repository
-- 🔄 **Sharing** with others
-- 🐛 **Reporting** issues
-- 💡 **Suggesting** improvements
-
----
-
-<p align="center">Made with ❤️ by <b>Hafiz Abdul Rehman</b></p>
+<div align="center">
+  <sub>â­ï¸ From <a href="https://github.com/Abdul-Insighht">Abdul-Insighht</a> â€” Passionate about AI, ML, and solving real-world problems</sub>
+</div>
